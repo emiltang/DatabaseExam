@@ -1,0 +1,22 @@
+Since no functional depencencies determine B and E, they must be part of a key.
+This will rule out all possible keys that does not contain these two
+
+BE -> D 
+
+Be is not key since it only determins D.
+
+ABE -> CD key!
+BCE -> AD key!
+BDE -> n/a
+
+If BE is combined with one of the three other tuples, then ABE determines CD.
+This determines all tuples and is a key. BCE is also a kay.
+BDE is not a key,
+
+ABCE -> D superkey!
+ABDE -> C superkey!
+BCDE -> A superkey!
+
+With four tubles, all possible keys that include both B and E, are supersets of 
+the keys from above. They are then superkeys.
+
