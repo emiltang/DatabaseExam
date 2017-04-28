@@ -1,0 +1,5 @@
+SELECT AVG(partCost)
+FROM Cars NATURAL JOIN Repairs
+WHERE year = 2000
+GROUP BY year
+

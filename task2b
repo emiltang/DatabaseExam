@@ -1,0 +1,10 @@
+AB -> C is a functional depency, if the realtion were to be in BCNF, AB should 
+be a superkey. Since AB only determines C, it is not a superkey. This is a 
+violation of BCNF.
+
+CD -> A is also a violation of BCNF. R can the be slit up into two relations, 
+BCDE and CDA.
+
+E -> D is a violation in BCDE, it can then be split into ED and BCE.
+
+Finally there are three relations BCE, CDA, and ED. Wich are all in BCNF.

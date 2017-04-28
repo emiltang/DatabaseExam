@@ -1,11 +1,7 @@
-SELECT firstname, lastname
-FROM Employees
-WHERE EID EXITS (
- 
-        -- Join Mechanic and Repairs, group by license and EID to find each 
-        -- unique repair, calculate the total price for each repair and 
-        -- find the maximum
-        SELECT EID, MAX(partCost + hours * hourlyPrice)
-        FROM Mechanic, Repairs
-        GROUP BY licence, EID
-)
+SELECT firstname, lastname, max(partCost + hours * hourlyPrice)
+AS most_Expensive_Repair
+FROM Mechanic NATURAL JOIN Repairs, Employees
+GROUP BY firstname, lastname
+ORDER BY most_Expensive_Repair DESC
+LIMIT 1
+

@@ -1,0 +1,7 @@
+In relation R CD -> A is a violation of 3NF, because CD is not a key or part of 
+a key.
+
+Following the 3NF synthesis from Ullman(2008), R is split into a realtion for 
+each FD, plus a relation consisting of key arritibutes. 
+
+The relations becomes, ABC, BCD, ACD, ED and BCE.
